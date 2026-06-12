@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Father's Day Field Guide 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:            #0e0d0b;
+      --parchment:      #f5f0e8;
+      --gold:           #b8973a;
+      --gold-light:     #d4af5a;
+      --gold-muted:     #7a5e1e;
+      --cream:          #faf7f2;
+      --warm-gray:      #6b6055;
+      --dark-panel:     #1a1814;
+      --rule:           #c8b98a;
+      --text-body:      #18130f;
+      --text-secondary: #4a3f37;
+      --tag-wellness:   #2e4a38;
+      --tag-gadget:     #1f2e4a;
+      --tag-hobby:      #4a2e1f;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--text-body);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── MASTHEAD ─────────────────────────────────────────────── */
+    .masthead {
+      background: var(--ink);
+      padding: 72px 40px 56px;
+      text-align: center;
+      border-bottom: 1px solid transparent;
+      background-image: linear-gradient(var(--ink), var(--ink)),
+                        linear-gradient(90deg, transparent, var(--gold), transparent);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      position: relative;
+    }
+    .masthead::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .masthead-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .masthead h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(42px, 6vw, 82px);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      color: var(--parchment);
+      line-height: 1.05;
+    }
+
+    .masthead h1 em {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .masthead-deck {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 19px;
+      font-style: italic;
+      color: var(--warm-gray);
+      margin-top: 20px;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .masthead-meta {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold-muted);
+      margin-top: 28px;
+    }
+
+    /* ─── INTRO ────────────────────────────────────────────────── */
+    .intro-section {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 40px 48px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .intro-section p {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 20px;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+
+    /* ─── CATEGORY KEY ─────────────────────────────────────────── */
+    .category-key {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 28px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .key-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      margin-right: 4px;
+    }
+
+    .tag {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+
+    .tag-wellness { background: var(--tag-wellness); color: #a3c9a8; }
+    .tag-gadget   { background: var(--tag-gadget);   color: #a3b5c9; }
+    .tag-hobby    { background: var(--tag-hobby);    color: #c9a89a; }
+
+    /* ─── ENTRIES ──────────────────────────────────────────────── */
+    .entries {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 0 28px;
+      padding: 52px 0;
+      border-bottom: 1px solid var(--rule);
+      animation: fadeIn 0.6s ease both;
+    }
+
+    .entry:last-child { border-bottom: none; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .entry-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--rule);
+      line-height: 1;
+      padding-top: 4px;
+      text-align: right;
+    }
+
+    .entry-body {}
+
+    .entry-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .entry-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.15;
+    }
+
+    .entry-price {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26px;
+      font-weight: 300;
+      color: var(--gold-light);
+      font-style: italic;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .entry-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .entry-buy {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .entry-buy:hover { color: var(--gold); border-color: var(--gold); }
+
+    /* ─── ENTRY CARD PANELS ────────────────────────────────────── */
+    .entry-card {
+      background: var(--dark-panel);
+      border-left: 2px solid var(--gold);
+      padding: 28px 32px;
+      margin-top: 2px;
+    }
+
+    .entry-card-section {
+      margin-bottom: 20px;
+    }
+    .entry-card-section:last-child { margin-bottom: 0; }
+
+    .entry-card-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .entry-card p {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--parchment);
+    }
+
+    .entry-card .natalie-note {
+      color: #c4bba8;
+      font-style: italic;
+    }
+
+    /* ─── FOOTER ───────────────────────────────────────────────── */
+    .footer {
+      background: var(--ink);
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #2a2820;
+    }
+
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-muted);
+    }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .masthead { padding: 52px 20px 40px; }
+      .intro-section { padding: 44px 20px 36px; }
+      .category-key { padding: 20px; }
+      .entries { padding: 0 20px 60px; }
+
+      .entry {
+        grid-template-columns: 36px 1fr;
+        gap: 0 16px;
+        padding: 40px 0;
+      }
+      .entry-num { font-size: 34px; }
+      .entry-card { padding: 20px; }
+
+      .entry-header { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <p class="masthead-eyebrow">A Considered List · Father's Day 2026</p>
+  <h1>The <em>Father's Day</em><br>Field Guide</h1>
+  <p class="masthead-deck">15 gifts under $50 — drawn from the specific intersection of who he is: the journalist, the fermenter, the tinkerer, the man who prefers to build something rather than buy a shirt.</p>
+  <p class="masthead-meta">Compiled for Natalie &nbsp;·&nbsp; June 2026 &nbsp;·&nbsp; 15 Items &nbsp;·&nbsp; All Under or Around $50</p>
+</header>
+
+<!-- INTRO -->
+<section class="intro-section">
+  <p>He will tell you he doesn't need anything. He's wrong. This list is not about need — it's about precision. Every item below was chosen because it fits the way he actually lives: making things with his hands, thinking too hard about everything, staring at screens longer than a human should, and doing all of it from home. No shirts. No socks. No subscriptions. Just 15 things that would make him measurably happier.</p>
+</section>
+
+<!-- CATEGORY KEY -->
+<div class="category-key">
+  <span class="key-label">Categories</span>
+  <span class="tag tag-wellness">Wellness</span>
+  <span class="tag tag-gadget">Gadget</span>
+  <span class="tag tag-hobby">Hobby / Craft</span>
+</div>
+
+<!-- ENTRIES -->
+<main class="entries">
+
+  <!-- 01 -->
+  <article class="entry">
+    <div class="entry-num">01</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">RENPHO Eyeris 1 Eye Massager</h2>
+        <span class="entry-price">~$45</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-wellness">Wellness</span>
+        <span class="tag tag-gadget">Gadget</span>
+        <a class="entry-buy" href="https://www.amazon.com/s?k=RENPHO+Eyeris+1+Eye+Massager" target="_blank">amazon.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>A heated, air-compression eye mask with vibration nodes that cradles the orbital area and temple. Bluetooth-enabled, rechargeable, and ready in seconds. This is the first thing he's been recommended by everyone who owns one.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>He spends hours daily staring at screens — news feeds, research tabs, writing windows. The cumulative strain is real and largely invisible until the headache arrives around 4pm. Fifteen minutes with this feels like a cortisol reset. Pairs well with the end of the workday or any time Julian goes down for quiet time.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">It's the most direct intersection of gadget and wellness on this list — the two things you care about him having more of. He won't buy it for himself. It also comes in a gift-ready box, which means zero wrapping effort on your part.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 02 -->
+  <article class="entry">
+    <div class="entry-num">02</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">Apera Instruments PH20 pH Meter</h2>
+        <span class="entry-price">~$50</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-hobby">Hobby / Craft</span>
+        <span class="tag tag-gadget">Gadget</span>
+        <a class="entry-buy" href="https://www.amazon.com/s?k=Apera+Instruments+PH20+pH+Meter" target="_blank">amazon.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>A waterproof, pocket-sized digital pH meter accurate to ±0.1 pH, trusted by food safety professionals and serious home fermenters. Comes in a complete kit with calibration solutions — ready to use immediately. Replacement probes are still available from Apera a decade after launch, making this a long-term kitchen tool, not a disposable gadget.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>Making hot sauce without a pH meter is guesswork. With one, it's craft. Knowing the exact acidity of a ferment — whether it's a habanero mash, a tepache, a lacto-garlic honey — tells him when it's safe, when it's peaked, and when to bottle. It upgrades a hobby he's actively investing time in.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">This is a gift that says you actually know what he's been doing on weekends. It costs less than a dinner out and he will use it every single time he ferments anything, for years. Specificity of this nature reads as love.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 03 -->
+  <article class="entry">
+    <div class="entry-num">03</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">AeroPress Original Coffee Maker</h2>
+        <span class="entry-price">$39.95</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-hobby">Hobby / Craft</span>
+        <a class="entry-buy" href="https://aeropress.com/products/aeropress-coffee-maker" target="_blank">aeropress.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>A compact, hand-press brewing system that combines pressure and micro-filtration to produce a smooth, grit-free cup in under two minutes. It is beloved by specialty coffee professionals, backpackers, and the kind of person who thinks carefully about things that most people do on autopilot. There are annual world championships held for AeroPress brewing technique.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>His morning coffee routine becomes something he has a point of view on. The AeroPress rewards experimentation — water temperature, brew time, grind size — which maps directly to how his brain works. It also produces a concentrated shot that's excellent over ice, which is relevant in a DC summer.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">At $39.95 it is arguably the best value of the entire list. It takes up no counter space, ships in a small box, and will outlast nearly every other appliance in the kitchen. If he's a coffee person who hasn't tried this yet, the reaction upon first cup will be worth the price alone.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 04 -->
+  <article class="entry">
+    <div class="entry-num">04</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">Lavatools Javelin Pro Classic Thermometer</h2>
+        <span class="entry-price">~$47</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-hobby">Hobby / Craft</span>
+        <span class="tag tag-gadget">Gadget</span>
+        <a class="entry-buy" href="https://lavatools.com" target="_blank">lavatools.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>An instrument-grade instant-read cooking thermometer with a 2-second response time, ±0.5°F accuracy, an auto-rotating backlit display, and IP65 water resistance. Featured in Serious Eats, the New York Times, and every serious home cook's kit. NSF-certified for food safety. Magnetic back for refrigerator storage.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>Whether he's simmering a pepper mash for hot sauce, cooking a steak, or monitoring a fermenter's ambient temperature, precision matters. Guessing costs. This tool eliminates the guesswork in anything involving heat, and 4,000+ battery hours means he'll never think about it again.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">He may already own a thermometer. He does not own <em>this</em> thermometer. There is a meaningful quality difference, and it's the kind of upgrade that costs less than a restaurant dinner but registers as a genuinely thoughtful gift from someone who pays attention.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 05 -->
+  <article class="entry">
+    <div class="entry-num">05</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">Cocktail Smoker Kit</h2>
+        <span class="entry-price">~$40–45</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-hobby">Hobby / Craft</span>
+        <span class="tag tag-gadget">Gadget</span>
+        <a class="entry-buy" href="https://www.amazon.com/s?k=cocktail+smoker+kit+wood+chips+torch" target="_blank">amazon.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>A complete cocktail smoking setup: a smoking lid, four-flame torch, and several varieties of wood chips (cherry, hickory, apple, oak). It infuses whiskey, bourbon, and other spirits with a film of fragrant smoke before you sip — a restaurant technique, done at home in 30 seconds. Look for kits from Crafthouse by Fortessa or similar brands that include a wood chip variety pack. No butane needed for most electric variants.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>He brews, he ferments, he experiments with flavor at the ingredient level. This extends that exact sensibility to his evening drink. A smoked old fashioned made at home — on a weeknight, in five minutes — is one of those small pleasures that quietly elevates the routine.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">It looks impressive and comes boxed like a proper gift. It's the "fun" item on the list — the one you give when you want the reaction, not just the utility. Search Amazon for "cocktail smoker kit with torch wood chips" and look for a kit that includes multiple wood chip varieties and the smoking lid.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 06 -->
+  <article class="entry">
+    <div class="entry-num">06</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">Govee Air Quality Monitor</h2>
+        <span class="entry-price">~$40</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-gadget">Gadget</span>
+        <span class="tag tag-wellness">Wellness</span>
+        <a class="entry-buy" href="https://govee.com" target="_blank">govee.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>A compact smart sensor that monitors indoor air quality in real time — tracking PM2.5 particulates, CO₂ levels, VOCs, temperature, and humidity simultaneously. It connects to a phone app, stores historical data, and triggers alerts when thresholds are exceeded. Govee makes some of the best consumer-grade smart home hardware in this price tier.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>He works from home. Poor air quality is a silent drag on cognitive performance — elevated CO₂ alone measurably impairs focus and decision-making. This gives him visibility into something invisible. He'll look at it constantly the first week and then check it whenever something feels off. It's also relevant when Julian's in the room.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">It threads the needle between wellness and gadget in a way that doesn't feel frivolous. It's something you can tell people about as a household purchase — "we finally got one of these" — and it lives in the common area, which means you both benefit. Look for the Govee H5106 or search govee.com for their current air quality model.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 07 -->
+  <article class="entry">
+    <div class="entry-num">07</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">Acupressure Mat &amp; Pillow Set</h2>
+        <span class="entry-price">~$35–45</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-wellness">Wellness</span>
+        <a class="entry-buy" href="https://www.amazon.com/s?k=acupressure+mat+pillow+set+prosourcefit" target="_blank">amazon.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>A dense foam mat and neck pillow covered in thousands of plastic acupressure points that stimulate circulation and trigger the body's relaxation response. Derived from traditional Indian bed-of-nails practice. Takes 5 minutes of daily use to become genuinely addictive. ProsourceFit makes the most recommended version in this price range, but Nayoya and Shakti are also well-regarded options.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>Anyone who sits at a desk for long stretches accumulates tension in the back, neck, and shoulders. Ten minutes on this mat — horizontal, quiet, while the house settles — is a recovery tool that requires no gym, no appointment, and no explanation. It's also one of those things that feels absurd the first time and becomes non-negotiable by day five.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">This is the clearest "I want you to take care of yourself" gift on the list, and it reads that way without being preachy. It rolls up, stores easily, and costs half what a single massage appointment does. You'll probably end up using it too.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 08 -->
+  <article class="entry">
+    <div class="entry-num">08</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">RENPHO R3 Mini Massage Gun</h2>
+        <span class="entry-price">~$50</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-wellness">Wellness</span>
+        <span class="tag tag-gadget">Gadget</span>
+        <a class="entry-buy" href="https://renpho.com" target="_blank">renpho.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>A pocket-sized percussive therapy device with multiple attachment heads, 20 speed settings, whisper-quiet motor, and a rechargeable battery. RENPHO's mini models punch significantly above their price point — smaller than a phone, delivers targeted deep-tissue percussion to any muscle group in seconds. Check RENPHO's site for the R3 or their current compact model at this price.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>Lower back tension, tight shoulders from a laptop, calves from standing at the counter while brewing — this handles all of it without scheduling, without an appointment, and without asking anyone for help. It also keeps him moving and functional, which matters when he's trying to stay sharp on long work stretches.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">A full-size Theragun costs $200+. This does a significant portion of the same job for a quarter of the price. It is small enough to live on his desk or nightstand without becoming another thing that accumulates somewhere and gathers dust. This one actually gets used.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 09 -->
+  <article class="entry">
+    <div class="entry-num">09</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">TriggerPoint GRID Foam Roller</h2>
+        <span class="entry-price">~$35–40</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-wellness">Wellness</span>
+        <a class="entry-buy" href="https://www.amazon.com/s?k=TriggerPoint+GRID+Foam+Roller+13+inch" target="_blank">amazon.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>The gold standard of foam rollers — a 13-inch multi-density surface over a hollow rigid core, designed to replicate the pressure patterns of a massage therapist's hands. Trusted by physical therapists, trainers, and professional athletes. Includes access to an online instructional video library. Built to support 500 lbs and retain its shape indefinitely.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>Five minutes of rolling before sitting down at the desk is a fundamentally different way to start the workday. It improves blood flow, loosens the IT band and lumbar, and does the kind of maintenance work that prevents the longer, more expensive problems that happen later. The GRID is the last foam roller most people ever buy.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">It's the kind of thing that looks like a boring gym accessory until the person who owns one tells you they use it every day. Durable, specific, and genuinely used. The 13-inch original is the right size — compact enough to not be in the way, long enough to do the job.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 10 -->
+  <article class="entry">
+    <div class="entry-num">10</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">Masontops Complete Fermentation Kit</h2>
+        <span class="entry-price">~$30</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-hobby">Hobby / Craft</span>
+        <a class="entry-buy" href="https://www.amazon.com/s?k=masontops+fermentation+kit+mason+jar" target="_blank">amazon.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>A complete mason jar fermentation system from Masontops: wide-mouth airlock lids with built-in one-way CO₂ valves, glass weights to keep vegetables submerged below brine, and a tamper for packing. Fits standard wide-mouth mason jars. Eliminates the makeshift setups that work-fine-but-shouldn't that most home fermenters rely on.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>He's fermenting hot sauce peppers, lacto-garlic, tepache, and whatever he decides to experiment with next. A proper airlock setup prevents contamination, allows CO₂ to escape without letting oxygen in, and reduces the chances of the kind of "what happened to this batch" failure that wastes weeks of work. Better equipment means better results.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">This is an inexpensive gift that carries real weight because it signals you've been paying attention. He talks about fermentation. He does it on weekends. Getting him proper tools for it says: "I see the things you care about." That registers differently than most gifts at any price.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 11 -->
+  <article class="entry">
+    <div class="entry-num">11</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">Sharp Pebble Premium Whetstone Set</h2>
+        <span class="entry-price">~$35</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-hobby">Hobby / Craft</span>
+        <a class="entry-buy" href="https://www.amazon.com/s?k=sharp+pebble+whetstone+set+1000+6000" target="_blank">amazon.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>A double-sided whetstone (typically 1000/6000 grit) in a rubber non-slip base, with an angle guide and a flattening stone. Sharp Pebble is consistently the highest-rated entry in this price tier — the kit includes everything needed to bring a dull knife back to a working edge and then finish it to near-razor sharpness. No oil required, just water.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>Cooking with a properly sharp knife is a qualitatively different experience — faster, safer, and more satisfying. A man who makes hot sauce from scratch should not be doing it with a blade that needs work. Knife sharpening is also one of those meditative manual tasks that gives the mind a rest from screen work, which is its own value.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">This is the gift that keeps delivering silently — every meal made after this purchase involves a better knife than the one before it. It also teaches a skill. Sharp Pebble has been the most-recommended beginner whetstone kit for years because it actually works and comes with clear instructions. Search "Sharp Pebble whetstone set 1000 6000 grit" on Amazon.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 12 -->
+  <article class="entry">
+    <div class="entry-num">12</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">My Weigh KD-8000 Digital Kitchen Scale</h2>
+        <span class="entry-price">~$45</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-hobby">Hobby / Craft</span>
+        <span class="tag tag-gadget">Gadget</span>
+        <a class="entry-buy" href="https://www.amazon.com/s?k=My+Weigh+KD-8000+digital+scale" target="_blank">amazon.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>A professional-grade 8kg digital scale accurate to 1 gram, with a large backlit display, a built-in baker's percentage mode, and a tare function that resets mid-recipe without removing the bowl. Made by My Weigh — a US company with 25+ years in precision scales. The KD-8000 is the open secret of serious home cooks, bakers, and brewers who need a scale that actually handles both delicate and large-batch work.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>Precise measurements transform how fermentation and hot sauce work. Weight-based recipes are reproducible; volume-based recipes are guesswork. When he can repeat a great batch exactly, the hobby gets more satisfying. The baker's percentage mode is also invaluable if he ever ventures into bread. This is the scale that replaces every other scale.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">It doesn't look exciting in a photo. But talk to anyone serious about cooking, brewing, or baking and they'll tell you: a proper scale is the upgrade they wish they'd made earlier. This one is precise enough for single-gram measurements but large enough for a full bread dough or a mash of peppers. It earns its counter space.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 13 -->
+  <article class="entry">
+    <div class="entry-num">13</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">OXO Good Grips Cold Brew Coffee Maker</h2>
+        <span class="entry-price">~$30–40</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-hobby">Hobby / Craft</span>
+        <a class="entry-buy" href="https://oxo.com" target="_blank">oxo.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>OXO's widely-praised cold brew concentrate maker — a 32oz glass carafe with a built-in fine-mesh filter, a perforated rainmaker lid for even saturation, and a clean-looking design that lives comfortably in the fridge. Produces a smooth, low-acid coffee concentrate overnight. Paired with the AeroPress (item 03), he now has two very different but equally serious coffee systems in the house.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>Cold brew on ice during a DC summer is non-negotiable. Making it at home from good beans costs a fraction of what a coffee shop charges for the same drink. The OXO's set-and-forget approach means he loads it before bed and has concentrate ready in the morning. Also relevant for any cocktail he wants to spike.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">This is a small domestic upgrade that you both benefit from. It's practical without being impersonal, and it fits in the fridge. The OXO name is a reliable shorthand for "quality version of a kitchen thing" — look for the 32oz model on oxo.com or Amazon.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 14 -->
+  <article class="entry">
+    <div class="entry-num">14</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">Blue Light Blocking Glasses</h2>
+        <span class="entry-price">~$25–40</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-wellness">Wellness</span>
+        <span class="tag tag-gadget">Gadget</span>
+        <a class="entry-buy" href="https://www.amazon.com/s?k=blue+light+blocking+glasses+clear+lens+men" target="_blank">amazon.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>Clear-lens glasses with a blue light filtering coating that reduces the high-energy visible light emitted by screens. Look for brands like Swanwick, Felix Gray, or Duco that use optical-quality lenses rather than the cheap tinted versions. Best worn in the evening hours, or all day if he's screen-heavy. No prescription required, no obvious tint — they look like regular frames.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>Evening screen use suppresses melatonin and delays sleep onset. For someone who works in media and likely checks his phone until the lights go out, this is one of the cheapest and most credible sleep hygiene interventions available. Better sleep compounds into better everything. He won't report feeling different the first week. He will by week three.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">This reads as "I want you to sleep better," which is one of the more quietly loving things you can give someone. It's light, small, easy to wrap, and genuinely functional. If you want to spend toward the higher end of this range, Felix Gray makes particularly well-reviewed clear-lens options. Search Amazon for "blue light blocking glasses clear lens" and sort by rating.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 15 -->
+  <article class="entry">
+    <div class="entry-num">15</div>
+    <div class="entry-body">
+      <div class="entry-header">
+        <h2 class="entry-name">Rocketbook Fusion Smart Reusable Notebook</h2>
+        <span class="entry-price">~$35</span>
+      </div>
+      <div class="entry-meta">
+        <span class="tag tag-gadget">Gadget</span>
+        <a class="entry-buy" href="https://getrocketbook.com" target="_blank">getrocketbook.com →</a>
+      </div>
+      <div class="entry-card">
+        <div class="entry-card-section">
+          <span class="entry-card-label">What it is</span>
+          <p>A reusable smart notebook — you write on the pages with a Pilot Frixion pen, scan them with the Rocketbook app, and they send instantly to Dropbox, Google Drive, Evernote, email, or Slack. Then you wipe the pages clean with a damp cloth and start again. The Fusion model includes multiple page types: weekly planner, monthly calendar, task lists, and blank note pages all in one book. Comes with a pen and microfiber cloth.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">How it improves his life</span>
+          <p>A journalist who thinks by hand — who still reaches for a notepad to untangle a complex idea — has been waiting for this intersection of analog and digital his entire career. Notes go to the cloud without being typed. Physical writing survives. The analog brain gets to work while digital organization handles everything downstream.</p>
+        </div>
+        <div class="entry-card-section">
+          <span class="entry-card-label">Why you'd be wise to get it</span>
+          <p class="natalie-note">This one is slightly different from the others: it's less about self-care and more about "I know how your brain works." That specificity is the whole game with gift-giving. It costs $35, requires no ongoing purchases, and is the kind of thing he'd show to a colleague and immediately feel good about having. Available at getrocketbook.com or Amazon.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer-text">Father's Day 2026 &nbsp;·&nbsp; 15 Items &nbsp;·&nbsp; All Under or Around $50 &nbsp;·&nbsp; No Shirts. No Socks. No Excuses.</p>
+</footer>
+
+</body>
+</html>
